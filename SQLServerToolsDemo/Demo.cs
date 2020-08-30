@@ -39,6 +39,7 @@ namespace Demo
         /// <summary>
         /// Read books, authors, etc., from the KaggleGoodReadsBookDataset on our server.
         /// Our VPN needs to be running.
+        /// There is no error handling at all.
         /// </summary>
         /// <returns>A List object containing the collection of Book objects</returns>
         public static List<Book> ReadBooks()
@@ -52,7 +53,6 @@ namespace Demo
                            "ORDER BY Book ASC";
 
             SQLServerTools.SQLServerTools sqlServerTools = new SQLServerTools.SQLServerTools("IL-Server-002.uccc.uc.edu\\MSSQLServer2019", "KaggleGoodReadsBookDataset", "KaggleGoodReadsBookDatasetLogin", "P@ssword1");
-            sqlServerTools.HelloWorld();
             sqlServerTools.ConnectToDatabase();
             SqlDataReader dr = sqlServerTools.submitSQL(query);
             if (dr.HasRows)
