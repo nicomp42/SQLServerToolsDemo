@@ -1,4 +1,8 @@
-﻿using SQLServerTools;
+﻿/*
+ * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ */
+using SQLServerTools;
 using SQLServerToolsDemo;
 using System;
 using System.Collections.Generic;
