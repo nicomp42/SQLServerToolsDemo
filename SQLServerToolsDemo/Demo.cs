@@ -36,6 +36,11 @@ namespace Demo
                 Console.WriteLine("No data found.");
             }
         }
+        /// <summary>
+        /// Read books, authors, etc., from the KaggleGoodReadsBookDataset on our server.
+        /// Our VPN needs to be running.
+        /// </summary>
+        /// <returns>A List object containing the collection of Book objects</returns>
         public static List<Book> ReadBooks()
         {
             List<SQLServerToolsDemo.Book> books = new List<Book>();
